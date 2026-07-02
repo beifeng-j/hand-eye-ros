@@ -1,0 +1,21 @@
+handeye_transform:
+  translation: {x: 0.160014, y: 0.0803532, z: 0.113804}
+  # quaternion in [w,x,y,z] order from hand-eye result (Tsai-Lenz example)
+  quaternion: [0.48256989214636353, -0.03881234075925272, 0.29225460335554965, -0.8247467176146414]
+
+# desired marker pose in camera frame (camera坐标系下的期望位姿)
+desired_marker_in_camera:
+  position: {x: 0.0, y: 0.0, z: 0.5}
+  orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}
+
+marker_topic: /aruco_single/pose
+base_frame: base_link
+end_link: link6
+cmd_vel_topic: /visual_servo/cmd_vel
+kp: 0.8
+kr: 1.0
+max_linear: 0.2
+max_angular: 1.0
+pos_tol: 0.01
+ang_tol: 0.05
+hz: 20

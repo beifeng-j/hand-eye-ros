@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- 启动视觉伺服节点 -->
+  <node pkg="handeye-calib" type="visual_servo_node.py" name="visual_servo_node" output="screen">
+    <param name="marker_topic" value="/aruco_single/pose" />
+    <rosparam command="load" file="$(find handeye-calib)/config/servo_params.yaml" />
+  </node>
+
+</launch>
